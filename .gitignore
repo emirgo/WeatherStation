@@ -1,2 +1,2 @@
-/.idea/*
-/venv/Scripts/*
+/broker/.idea/*
+/broker/venv/Scripts/*
