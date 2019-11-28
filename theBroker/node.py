@@ -1,37 +1,24 @@
-import paho.mqtt.client as mqtt
 import time
-# logging function that prints behaviour in console
-def on_log(client, userdata, level, buf):
-    print("[LOG] " + buf)
+import ttn
 
-# connection function that makes the connection behaviour printable
-def on_connect(client, userdata, flags, rc):
-    if rc == 0:
-        print("[CONNECTION] OK")
-    else:
-        print("[CONNECTION] Bad connection returned code: ", rc)
+app_id = "weatherstation8ball"
+access_key = "ttn-account-v2.grmsMAXrCx0TzdWetgHS5ZkpM8bLpGn54oSqWn2Vxk8"
 
-def on_disconnect(client, userdata, flags, rc = 0):
-    print("[CONNECTION] Disconnected result code " + str(rc))
+def uplink_callback(msg, client):
+  print("Received uplink from ", msg.dev_id)
+  print(msg)
 
-def on_message(client, userdata, msg):
-    topic = msg.topic
-    m_decode = str(msg.payload.decode("utf-8", "ignore"))
-    print("[MESSAGE] ", m_decode)
+handler = ttn.HandlerClient(app_id, access_key)
 
-broker = "mqtt.eclipse.org"
-client = mqtt.Client("8balltechnologies")
+# using mqtt client
+# mqtt_client = handler.data()
+# mqtt_client.set_uplink_callback(uplink_callback)
+# time.sleep(60)
+# mqtt_client.close()
 
-client.on_connect = on_connect
-client.on_disconnect = on_disconnect
-# client.on_log = on_log
-client.on_message = on_message
-print("[INFO] Connecting to broker ", broker)
-
-client.connect(broker)
-client.loop_start()
-client.subscribe("house/sensor1")
-client.publish("house/sensor1", "my first message")
-time.sleep(4)
-client.loop_stop()
-client.disconnect()
+# using application manager client
+app_client = handler.application()
+my_app = app_client.get()
+print(my_app)
+my_devices = app_client.devices()
+print(my_devices)
