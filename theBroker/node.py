@@ -1,5 +1,5 @@
 import paho.mqtt.client as mqtt
-import time
+import time as tm
 
 # logging function that prints behaviour in console
 def on_log(client, userdata, level, buf):
