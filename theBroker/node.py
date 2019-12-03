@@ -27,6 +27,7 @@ def uplink_callback(msg, client):
     query = "INSERT INTO `measurement` (`temperature`, `humidity`, `pressure`) VALUES (%s, %s, %s)"
     cursor.execute(query, (splitmsg[0], splitmsg[1], splitmsg[2]))
     connection.commit()
+    count = 0
 
 handler = ttn.HandlerClient(app_id, access_key)
 

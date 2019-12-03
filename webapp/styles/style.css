@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+}
+
+.btn-warning {
+    color: #212529;
+    background-color: #fe9900;
+    border-color: #fe9900;
+}
+
+input {
+    margin: 10px 0px;
+}
+
+.bg-dark {
+    background-color: #000 !important;
+}
