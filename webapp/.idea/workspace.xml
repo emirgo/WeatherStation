@@ -23,7 +23,7 @@
   <component name="ProjectId" id="1UHgfY3R3SNMa30vjHngO6a8brd" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/charts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -62,6 +62,8 @@
       <workItem from="1575362719013" duration="6657000" />
       <workItem from="1575371638544" duration="105000" />
       <workItem from="1575380039483" duration="283000" />
+      <workItem from="1575472244007" duration="624000" />
+      <workItem from="1575532133764" duration="8509000" />
     </task>
     <servers />
   </component>

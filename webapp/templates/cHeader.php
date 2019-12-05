@@ -27,6 +27,37 @@
             });
             chart.render();
 
+            var chart2 = new CanvasJS.Chart("chartContainer2", {
+                theme: "dark1",
+                title: {
+                    text: "Humidity"
+                },
+                axisY: {
+                    title: "RH"
+                },
+                data: [{
+                    type: "line",
+                    lineColor: "orange",
+                    dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+                }]
+            });
+            chart2.render();
+
+            var chart3 = new CanvasJS.Chart("chartContainer3", {
+                theme: "dark1",
+                title: {
+                    text: "Pressure"
+                },
+                axisY: {
+                    title: "Pascal"
+                },
+                data: [{
+                    type: "line",
+                    lineColor: "orange",
+                    dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
+                }]
+            });
+            chart3.render();
         }
     </script>
 </head>
