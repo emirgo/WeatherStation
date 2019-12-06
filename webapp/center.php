@@ -1,12 +1,14 @@
 <?php include('includes/auth.php'); ?>
 <?php
+// Author: Emirhan Gocturk
+// Date: 2 December 2019
 include('includes/getTemperatureData.php');
 include('includes/getHumidityData.php');
 include('includes/getPressureData.php');
 ?>
 <?php include('templates/cHeader.php'); ?>
 <?php
-if($_SESSION['sound']){
+if($_SESSION['sound'] ){
     echo '<audio autoplay>'.
             '<source src="intro.mp3">'.
         '</audio>';
@@ -14,7 +16,18 @@ if($_SESSION['sound']){
 }
 ?>
 <div class="container" style="margin-top: 5%;">
-    <img src="img/logo.png" alt="" width="150px;" style="margin-bottom: 2%;">
+    <div class="row">
+        <div class="col-md">
+            <img src="img/logo.png" alt="" width="150px;" style="margin-bottom: 2%;">
+        </div>
+        <div class="col-md"></div>
+        <div class="col-md">
+            <div class="row">
+                <div class="col-md"></div>
+                <div class="col-md"></div>
+                <div class="col-md"><a href="index.php">Logout</a></div>
+            </div></div>
+    </div>
 
     <div class="row">
         <div class="col-md">

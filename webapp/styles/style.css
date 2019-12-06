@@ -21,10 +21,10 @@ a {
 }
 a:hover {
     text-decoration: none;
-    -webkit-animation:a 1s infinite;
-    -ms-animation:a 1s infinite;
-    -o-animation:a 1s infinite;
-    animation:a 1s infinite;
+    -webkit-animation:a 0.35s infinite;
+    -ms-animation:a 0.35s infinite;
+    -o-animation:a 0.35s infinite;
+    animation:a 0.35s infinite;
 }
 @-webkit-keyframes a {
     0% {color: #ff0000;}
@@ -137,16 +137,4 @@ a:hover {
     80% {color: #0000ff;}
     90% {color: #8000ff;}
     100% {color: #ff0080;}
-}
-
-.form-control{
-    background-color: #000;
-}
-
-.form-control:hover{
-    background-color: #000;
-}
-
-.form-control:focus{
-    background-color: #000;
 }

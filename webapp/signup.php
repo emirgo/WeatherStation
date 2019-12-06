@@ -1,4 +1,10 @@
-<?php include('templates/header.php'); ?>
+<?php
+// Author: Emirhan Gocturk
+// Date: 2 December 2019
+// Description: Signup page used to display the UI for user to put in data
+
+include('templates/header.php');
+?>
 
 <div class="container">
     <div class="row">

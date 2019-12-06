@@ -1,3 +1,5 @@
+<?php // Included for client area where charts are displayed ?>
+
 <!doctype html>
 <html lang="en">
 <head>
