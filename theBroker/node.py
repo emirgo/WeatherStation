@@ -46,11 +46,8 @@ def uplink_callback(msg, client):
     cursor.execute(query, (splitmsg[0], splitmsg[1], splitmsg[2]))
     # Commit query - meaning that database will reflect executed query
     connection.commit()
-<<<<<<< Updated upstream
-=======
     # Reset count to 0 as we don't want it to time out anymore
     count = 0
->>>>>>> Stashed changes
 
 # Create the handler for TTN
 handler = ttn.HandlerClient(app_id, access_key)

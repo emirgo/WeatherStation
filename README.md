@@ -4,6 +4,6 @@
 
 # Todo:
 - [WEB] Register
-- [WEB] Login
-- [WEB] User center
+- [WEB] Login - in progress
+- [WEB] User center - in progress
 - Runs on a server instead of localhost
