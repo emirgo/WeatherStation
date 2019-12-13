@@ -1,10 +1,7 @@
 <?php
-// Database handler
-$SERVER_NAME = 'localhost';
-$DB_USERNAME = 'root';
-$DB_PASSWORD = '';
-$DB_NAME = 'weatherstation';
+include 'dbConfig.php';
 
+// Database handler
 $conn = mysqli_connect($SERVER_NAME, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
 
 if (!$conn) {

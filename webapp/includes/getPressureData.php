@@ -1,4 +1,5 @@
 <?php
+include 'dbConfig.php';
 // Author: Emirhan Gocturk
 // Date: 5 December 2019
 // Description: Gets pressure data from database and puts it into charts
@@ -8,8 +9,8 @@ $dataPoints3 = array();
 try {
     // Creating a new connection.
     $link = new \PDO('mysql:host=localhost;dbname=weatherstation;charset=utf8mb4',
-        'root', //'root',
-        '', //'',
+        $DB_USERNAME, //'root',
+        $DB_PASSWORD, //'',
         array(
             \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             \PDO::ATTR_PERSISTENT => false

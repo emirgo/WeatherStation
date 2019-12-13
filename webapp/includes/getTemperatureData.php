@@ -1,11 +1,12 @@
 <?php
+include 'dbConfig.php';
 
 $dataPoints = array();
 try{
     // Creating a new connection.
     $link = new \PDO(   'mysql:host=localhost;dbname=weatherstation;charset=utf8mb4',
-        'root', //'root',
-        '', //'',
+        $DB_USERNAME, //'root',
+        $DB_PASSWORD, //'',
         array(
             \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             \PDO::ATTR_PERSISTENT => false
