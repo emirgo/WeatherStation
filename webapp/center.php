@@ -1,20 +1,30 @@
-<?php include('includes/auth.php'); ?>
 <?php
 // Author: Emirhan Gocturk
 // Date: 2 December 2019
+include('includes/auth.php');
 include('includes/getTemperatureData.php');
 include('includes/getHumidityData.php');
 include('includes/getPressureData.php');
-?>
-<?php include('templates/cHeader.php'); ?>
-<?php
-if($_SESSION['sound'] ){
+
+if ($_SESSION['sound']) {
     echo '<audio autoplay>'.
-            '<source src="intro.mp3">'.
+        '<source src="intro.mp3">'.
         '</audio>';
     $_SESSION['sound'] = false;
 }
 ?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8BALL INDUSTRIES</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="./styles/style.css" rel="stylesheet">
+</head>
+<body>
 <div class="container" style="margin-top: 5%;">
     <div class="row">
         <div class="col-md">
@@ -31,18 +41,22 @@ if($_SESSION['sound'] ){
 
     <div class="row">
         <div class="col-md">
-            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            <div id="chartTemp">
+
+            </div>
         </div>
         <div class="col-md">
-            <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
-            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            <div id="chartHum">
+
+            </div>
         </div>
         <div class="col-md">
-            <div id="chartContainer3" style="height: 370px; width: 100%;"></div>
-            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            <div id="chartPressure">
+
+            </div>
         </div>
     </div>
 </div>
-
+<script type="text/javascript" src="js/apexcharts.js"></script>
+<?php include('templates/chartSettings.php'); ?>
 <?php include('templates/footer.php'); ?>
