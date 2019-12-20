@@ -7,6 +7,10 @@ include('includes/getHumidityData.php');
 include('includes/getPressureData.php');
 include ('../templates/header.php');
 
+$latestTemp = $dataPoints[0]['y'];
+$latestHum = $dataPoints2[0]['y'];
+$latestPress = $dataPoints3[0]['y'];
+
 if ($_SESSION['sound']) {
     echo '<audio autoplay>'.
         '<source src="intro.mp3">'.
@@ -27,14 +31,14 @@ if ($_SESSION['sound']) {
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">8 Ball</a>
+        <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Data list</a>
+                <a class="nav-item nav-link" href="dataList.php">Data list</a>
             </div>
         </div>
         <div class="navbar-collapse collapse w-50 order-3 dual-collapse2">
@@ -46,35 +50,29 @@ if ($_SESSION['sound']) {
         </div>
     </nav>
 <div class="container" style="margin-top: 5%;">
-    <div class="row">
-        <div class="col-md">
-            <img src="img/newLogo.jpeg" alt="" width="150px;" style="margin-bottom: 2%;">
-        </div>
-        <div class="col-md"></div>
-        <div class="col-md">
-            <div class="row">
-                <div class="col-md"></div>
-                <div class="col-md"></div>
-            </div></div>
-    </div>
+
 
     <div class="row">
         <div class="col-sm">
             <h1 class="text-center">
-                35˚C
+                <?php echo $latestTemp ?>˚C
             </h1>
+            <p class="text-center">Latest temperature</p>
         </div>
         <div class="col-sm">
             <h1 class="text-center">
-                35˚C
+                <?php echo $latestHum ?>% RH
             </h1>
+            <p class="text-center">Latest humidity</p>
         </div>
         <div class="col-sm">
             <h1 class="text-center">
-                35˚C
+                <?php echo $latestPress ?> Pa
             </h1>
+            <p class="text-center">Latest pressure</p>
         </div>
     </div>
+    <br>
 
 
     <div class="row">
