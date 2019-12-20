@@ -8,7 +8,7 @@ include 'dbConfig.php';
 $dataPoints3 = array();
 try {
     // Creating a new connection.
-    $link = new \PDO('mysql:host=localhost;dbname=weatherstation;charset=utf8mb4',
+    $link = new \PDO('mysql:host=localhost;dbname=' . $DB_NAME . ';charset=utf8mb4',
         $DB_USERNAME, //'root',
         $DB_PASSWORD, //'',
         array(
@@ -18,13 +18,13 @@ try {
     );
 
     // Prepare, execute and fetch the result
-    $handle = $link->prepare('select id, pressure from measurement order by id desc limit 20160');
+    $handle = $link->prepare('select date_added, pressure from measurement order by id desc limit 20160');
     $handle->execute();
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 
     // Place data into assoc array
     foreach ($result as $row) {
-        array_push($dataPoints3, array("x" => $row->id, "y" => $row->pressure));
+        array_push($dataPoints3, array("x" => $row->date_added, "y" => $row->pressure));
     }
     $link = null;
 } catch (\PDOException $ex) {
