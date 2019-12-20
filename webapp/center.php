@@ -28,7 +28,7 @@ if ($_SESSION['sound']) {
 <div class="container" style="margin-top: 5%;">
     <div class="row">
         <div class="col-md">
-            <img src="img/logo.png" alt="" width="150px;" style="margin-bottom: 2%;">
+            <img src="img/newLogo.jpeg" alt="" width="150px;" style="margin-bottom: 2%;">
         </div>
         <div class="col-md"></div>
         <div class="col-md">

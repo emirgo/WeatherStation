@@ -11,7 +11,7 @@ include('includes/logout.php');
     <div class="row">
         <div class="col-md"></div>
         <div class="col-md" style="margin-top: 15%;">
-            <center> <img src="./img/logo.png" alt="" width="150px;">
+            <center> <img src="./img/newLogo.jpeg" alt="" width="150px;">
                 <p style="color: white;">Premium member login</p>
             </center>
             <form action="includes/login.php" method="post">

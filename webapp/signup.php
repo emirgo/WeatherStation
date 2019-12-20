@@ -10,7 +10,7 @@ include('templates/header.php');
     <div class="row">
         <div class="col-md"></div>
         <div class="col-md" style="margin-top: 15%;">
-            <center> <img src="./img/logo.png" alt="" width="150px;">
+            <center> <img src="./img/newLogo.jpeg" alt="" width="150px;">
                 <p style="color: white;">Become a premium member</p>
             </center>
             <form action="includes/register.php" method="post">

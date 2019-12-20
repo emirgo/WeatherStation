@@ -3,9 +3,14 @@ body {
 }
 
 .btn-warning {
-    color: #212529;
-    background-color: #fe9900;
-    border-color: #fe9900;
+    color: #fff;
+    background-color: #0080ff;
+    border-color: #0080ff;
+}
+
+.btn-warning:hover {
+    background-color: #0080ff;
+    border-color: #0080ff;
 }
 
 input {
@@ -13,11 +18,11 @@ input {
 }
 
 .bg-dark {
-    background-color: #000 !important;
+    background-color: #0080ff !important;
 }
 
 a {
-    color: #fe9900;
+    color: #0080ff;
 }
 a:hover {
     text-decoration: none;
