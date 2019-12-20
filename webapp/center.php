@@ -5,6 +5,7 @@ include('includes/auth.php');
 include('includes/getTemperatureData.php');
 include('includes/getHumidityData.php');
 include('includes/getPressureData.php');
+include ('../templates/header.php');
 
 if ($_SESSION['sound']) {
     echo '<audio autoplay>'.
@@ -25,19 +26,56 @@ if ($_SESSION['sound']) {
     <link href="./styles/style.css" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">8 Ball</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Data list</a>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse w-50 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 <div class="container" style="margin-top: 5%;">
     <div class="row">
         <div class="col-md">
-            <img src="img/logo.png" alt="" width="150px;" style="margin-bottom: 2%;">
+            <img src="img/newLogo.jpeg" alt="" width="150px;" style="margin-bottom: 2%;">
         </div>
         <div class="col-md"></div>
         <div class="col-md">
             <div class="row">
                 <div class="col-md"></div>
                 <div class="col-md"></div>
-                <div class="col-md"><a href="index.php">Logout</a></div>
             </div></div>
     </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <h1 class="text-center">
+                35˚C
+            </h1>
+        </div>
+        <div class="col-sm">
+            <h1 class="text-center">
+                35˚C
+            </h1>
+        </div>
+        <div class="col-sm">
+            <h1 class="text-center">
+                35˚C
+            </h1>
+        </div>
+    </div>
+
 
     <div class="row">
         <div class="col-md">
