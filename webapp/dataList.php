@@ -35,6 +35,7 @@ include 'includes/getListData.php';
                     <th scope="col">Temperature</th>
                     <th scope="col">Humidity</th>
                     <th scope="col">Pressure</th>
+                    <th scope="col">Date added</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -45,6 +46,7 @@ include 'includes/getListData.php';
                     <td>" . $row['temperature'] . "˚C</td>
                     <td>" . $row['humidity'] . "% RH</td>
                     <td>" . $row['pressure'] . " HPa</td>
+                    <td>" . $row['date_added'] . "</td>
                 </tr>";
                 }
                 ?>
