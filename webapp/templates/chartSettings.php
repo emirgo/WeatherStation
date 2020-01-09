@@ -53,7 +53,9 @@
             },
         },
         xaxis: {
-            type: 'category',
+            type: 'datetime',
+            min: new Date(<?php echo $dataPoints[0]->x; ?>),
+            max: new Date(<?php echo end($dataPoints)->x; ?>),
             categories: [],
             labels: {
                 show: true,
@@ -67,9 +69,7 @@
                 offsetX: 0,
                 offsetY: 0,
                 format: undefined,
-                formatter: function(val) {
-                    return Math.round(val);
-                }
+
             },
         },
         tooltip: {
@@ -137,7 +137,9 @@
             },
         },
         xaxis: {
-            type: 'category',
+            type: 'datetime',
+            min: new Date(<?php echo $dataPoints2[0]->x; ?>),
+            max: new Date(<?php echo end($dataPoints2)->x; ?>),
             categories: [],
             labels: {
                 show: true,
@@ -151,14 +153,15 @@
                 offsetX: 0,
                 offsetY: 0,
                 format: undefined,
-                formatter: function(val) {
-                    return Math.round(val);
-                },
+
             },
         },
 
         tooltip: {
             shared: false,
+            x: {
+                format: 'dd MMM yyyy'
+            },
             y: {
                 text: 'Test'
             }
@@ -244,7 +247,9 @@
             },
         },
         xaxis: {
-            type: 'category',
+            type: 'datetime',
+            min: new Date(<?php echo $dataPoints3[0]->x; ?>),
+            max: new Date(<?php echo end($dataPoints3)->x; ?>),
             categories: [],
             labels: {
                 show: true,
@@ -258,9 +263,7 @@
                 offsetX: 0,
                 offsetY: 0,
                 format: undefined,
-                formatter: function(val) {
-                    return Math.round(val);
-                }
+
             },
         },
         tooltip: {

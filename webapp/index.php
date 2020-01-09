@@ -6,7 +6,6 @@ include('templates/header.php');
 include('includes/logout.php');
 
 ?>
-
 <div class="container">
     <div class="row">
         <div class="col-md"></div>
