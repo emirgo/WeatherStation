@@ -53,10 +53,7 @@ if ($_SESSION['sound']) {
 
 
     <div class="row">
-<<<<<<< HEAD
-        <div class="col-md">
-            <img src="img/newLogo.jpeg" alt="" width="150px;" style="margin-bottom: 2%;">
-=======
+
         <div class="col-sm">
             <h1 class="text-center">
                 <?php echo $latestTemp ?>˚C
@@ -74,7 +71,6 @@ if ($_SESSION['sound']) {
                 <?php echo $latestPress ?> Pa
             </h1>
             <p class="text-center">Latest pressure</p>
->>>>>>> date-xaxis
         </div>
     </div>
     <br>
