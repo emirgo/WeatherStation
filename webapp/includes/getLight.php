@@ -7,7 +7,7 @@ include 'dbConfig.php';
 // Description: Gets pressure data from database and puts it into charts
 
 // Data array that we return for front end to display
-$dataPoints3 = array();
+$dataPoints4 = array();
 try {
     // Creating a new connection.
     $link = new \PDO('mysql:host=localhost;dbname=' . $DB_NAME . ';charset=utf8mb4',
@@ -20,13 +20,13 @@ try {
     );
 
     // Prepare, execute and fetch the result
-    $handle = $link->prepare('select date_added, pressure from measurements order by id desc limit 20160');
+    $handle = $link->prepare('select date_added, light from measurements order by id desc limit 20160');
     $handle->execute();
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 
     // Place data into assoc array
     foreach ($result as $row) {
-        array_push($dataPoints3, array("x" => $row->date_added, "y" => $row->pressure));
+        array_push($dataPoints4, array("x" => $row->date_added, "y" => $row->light));
     }
     $link = null;
 } catch (\PDOException $ex) {
