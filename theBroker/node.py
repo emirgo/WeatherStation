@@ -7,6 +7,7 @@
 #
 
 import time
+import datetime
 import ttn
 import base64
 import pymysql
@@ -30,7 +31,7 @@ access_key = "ttn-account-v2.grmsMAXrCx0TzdWetgHS5ZkpM8bLpGn54oSqWn2Vxk8"
 def uplink_callback(msg, client):
     print("[INFO] Received uplink from: ", msg.dev_id)
 
-    # Decode and split message into 3 pieces
+    # Decode and split message received into 4 pieces
     msgenc = base64.b64decode(msg.payload_raw)
     splitmsg = (msgenc.decode('utf-8')).split(',')
     print("[RECEIVED]", splitmsg)
@@ -41,13 +42,17 @@ def uplink_callback(msg, client):
     mixer.music.play()
 
     # Prepare the query
-    query = "INSERT INTO `measurement` (`temperature`, `humidity`, `pressure`) VALUES (%s, %s, %s)"
+    query = "INSERT INTO `measurements` (`temperature`, `humidity`, `pressure`, `light`, `date_added`) VALUES (%s, %s, %s, %s, %s)"
+    # Get time of now [Greenwich Meridian]
+    timeNow = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print("[TIMESTAMP] ",timeNow)
     # Execute the query
-    cursor.execute(query, (splitmsg[0], splitmsg[1], splitmsg[2]))
+    cursor.execute(query, (splitmsg[0], splitmsg[1], splitmsg[2], splitmsg[3], timeNow));
     # Commit query - meaning that database will reflect executed query
     connection.commit()
     # Reset count to 0 as we don't want it to time out anymore
     count = 0
+    print("<===============================>")
 
 # Create the handler for TTN
 handler = ttn.HandlerClient(app_id, access_key)
@@ -73,7 +78,7 @@ while 1:
     count += 1
 
     # Time out
-    if count > 7:
+    if count > 8:
         print("[WARNING] Sensor(s) disconnected.")
         count = 0
 
