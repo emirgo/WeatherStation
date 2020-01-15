@@ -1,12 +1,12 @@
 <?php
 // Author: Emirhan Gocturk
 // Date: 2 December 2019
-include('includes/auth.php');
-include('includes/getTemperatureData.php');
-include('includes/getHumidityData.php');
-include('includes/getPressureData.php');
-include('includes/getLight.php');
-include ('templates/header.php');
+include('./includes/auth.php');
+include('./includes/getTemperatureData.php');
+include('./includes/getHumidityData.php');
+include('./includes/getPressureData.php');
+include('./includes/getLight.php');
+include ('./templates/header.php');
 
 // Store latest temperature in an easier to be called variable
 $latestTemp = $dataPoints[0]['y'];
@@ -55,8 +55,6 @@ if ($_SESSION['sound']) {
         </div>
     </nav>
 <div class="container" style="margin-top: 5%;">
-        <center><?php getWeatherIcon(); ?></center>
-
     <div class="row">
         <div class="col-md">
             <h1 class="text-center">
