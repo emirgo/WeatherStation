@@ -55,6 +55,8 @@ if ($_SESSION['sound']) {
         </div>
     </nav>
 <div class="container" style="margin-top: 5%;">
+        <center><?php getWeatherIcon(); ?></center>
+
     <div class="row">
         <div class="col-md">
             <h1 class="text-center">
