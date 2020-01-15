@@ -65,24 +65,14 @@
       <workItem from="1575472244007" duration="624000" />
       <workItem from="1575532133764" duration="9942000" />
       <workItem from="1575620379942" duration="3967000" />
+      <workItem from="1578564225029" duration="2571000" />
+      <workItem from="1578645508803" duration="4425000" />
+      <workItem from="1578990735486" duration="4305000" />
+      <workItem from="1579088667857" duration="1546000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/includes/getTemperatureData.php</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/signup.php</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

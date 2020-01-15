@@ -34,7 +34,7 @@ if (isset($_POST['signupSubmit'])) {
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            // PRepare sql statement
+            // Prepare sql statement
             header('Location: ../signup.php?error=sqlError1');
             exit();
         } else {
