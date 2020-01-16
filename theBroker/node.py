@@ -1,7 +1,6 @@
 #
 # Author: Emirhan Gocturk
 # Date: 25 November 2019
-# Contributors: Frank - Alikhan - Midas
 # Description: Listens to TTN and executes uplink_callback to store
 #               in coming information into the MySQL database.
 #
