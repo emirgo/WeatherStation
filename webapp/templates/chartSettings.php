@@ -321,7 +321,7 @@
                 text: 'weather'
             },
             title: {
-                text: 'AL'
+                text: 'Luminosity'
             },
         },
         crosshairs: {
