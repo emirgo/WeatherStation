@@ -10,7 +10,7 @@ This project is based on computer software engineer for Saxion University of App
 The following instructions will get you a copy of the project up and running on your local machine for development and testing purposes. First of all it need 
 
 ### Requirements
-* [LoPy]([LoPy](https://github.com/emirgo/WeatherStation/tree/master/lopy))
+* [LoPy](https://github.com/emirgo/WeatherStation/tree/master/lopy)
 * [Webapp](https://github.com/emirgo/WeatherStation/tree/master/webapp)
 * [MQTT Broker](https://github.com/emirgo/WeatherStation/tree/master/theBroker)
 * [Android Mobile App]()
