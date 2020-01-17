@@ -31,14 +31,12 @@ After cloning this repository you can launch the project in PHPStorm directly wi
 
 Now you can place this repository in htdocs folder inside XAMPP's directory.
 
-## Setting up database
-- You can find the SQL dump at [link to database readme.md]
-
 ## Logging in
 You need to sign up as a new user in order to log in. However, software developers are lazy and we know that. So there is a superuser account. Credentials can be found below:
-Username: superuser
-Password: superuser
-Email: superuser[at]test[dot]com
+
+* Username: superuser
+* Password: superuser
+* Email: superuser[at]test[dot]com
 
 Note: you can login using username instead of email as well.
 
