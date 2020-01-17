@@ -35,12 +35,42 @@ Now you can place this repository in htdocs folder inside XAMPP's directory.
 - You can find the SQL dump at [link to database readme.md]
 
 ## Logging in
-You need to sign up as a new user in order to log in. However, software developers are lazy and we know that. So there is a superuser account. Credentials can be found below:<br>
-Username: superuser<br>
-Password: superuser<br>
-Email: superuser[at]test[dot]com<br>
+You need to sign up as a new user in order to log in. However, software developers are lazy and we know that. So there is a superuser account. Credentials can be found below:
+Username: superuser
+Password: superuser
+Email: superuser[at]test[dot]com
 
 Note: you can login using username instead of email as well.
+
+# Database
+
+#### Measurements
+In this table all the measurements from the LoPy are stored in.
+Every measurement has an id that is stored in order of meausrement
+The broker splits the data from the LoPy into: temperature, humidity, pressure and light.
+It also stores the date of the measured data.
+```sql
+CREATE TABLE `measurements` (
+  `id` int(11) NOT NULL,
+  `temperature` float NOT NULL,
+  `humidity` float NOT NULL,
+  `pressure` float NOT NULL,
+  `light` float NOT NULL,
+  `date_added` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
+
+#### Login webapp
+In this table all the information of the created accounts from the webapp are stored.
+Every user has it's own id. Uid is the chosen name of the user, email is their email adress and pwd is their password.
+```sql
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `uid` tinytext NOT NULL,
+  `email` tinytext NOT NULL,
+  `pwd` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
 
 License
 ----
