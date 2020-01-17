@@ -48,7 +48,7 @@ while 1:
     temp2 = (str(si.temperature()))                                             # Temperature in C
     humid = (str(si.humidity()))                                                # Calculated relative humidity given current temperature
     press = (str(mpp.pressure()/100))                                           # Pressure in Milibars
-    light = (str(((lt.lux())*0.09290304*50)/100))
+    light = (str(((lt.lux())*0.09290304*50)/100))  #
     data = temp2 + "," + humid + "," + press + "," + light                                   # Creating string with all sensor readings
     ttn.send(data)                                                              # Send the measured readings in a string file
 
