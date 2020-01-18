@@ -35,7 +35,7 @@ pycom.rgbled(0x00ff00)                                                          
 py = Pysense()
 mp = MPL3115A2(py,mode=ALTITUDE)                                                # Sensor returns height in meters. Mode may also be set to PRESSURE
 si = SI7006A20(py)                                                              # Sensor returns temperature in C
-lt = LTR329ALS01(py)                                                            # Sensor returns ambient light
+lt = LTR329ALS01(py)                                                            # Sensor returns ambient light in lux
 li = LIS2HH12(py)
 mpp = MPL3115A2(py,mode=PRESSURE)                                               # Sensor returns height in meters. Mode may also be set to PRESSURE
 
@@ -48,8 +48,8 @@ while 1:
     temp2 = (str(si.temperature()))                                             # Temperature in C
     humid = (str(si.humidity()))                                                # Calculated relative humidity given current temperature
     press = (str(mpp.pressure()/100))                                           # Pressure in Milibars
-    light = (str(((lt.lux())*0.09290304*50)/100))  #
-    data = temp2 + "," + humid + "," + press + "," + light                                   # Creating string with all sensor readings
+    light = (str(((lt.lux())*0.09290304*50)/100))                               # Ambient light in Lumens percentaga
+    data = temp2 + "," + humid + "," + press + "," + light                      # Creating string with all sensor readings
     ttn.send(data)                                                              # Send the measured readings in a string file
 
     print(light)                                                               # Prints sent whenever the data is sent to the TTN
