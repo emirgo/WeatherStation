@@ -17,7 +17,7 @@ try{
     );
 
     // Prepare, execute and fetch the result
-    $handle = $link->prepare('select date_added, temperature from measurements order by id desc limit 20160');
+    $handle = $link->prepare('select date_added, temperature from measurements order by id desc');
     $handle->execute();
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 

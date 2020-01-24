@@ -18,7 +18,7 @@ try{
     );
 
     // Prepare, execute and fetch the result
-    $handle = $link->prepare('select id, temperature, humidity, pressure, light, date_added from measurements order by id asc limit 20160');
+    $handle = $link->prepare('select id, temperature, humidity, pressure, light, date_added from measurements order by id asc');
     $handle->execute();
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 
